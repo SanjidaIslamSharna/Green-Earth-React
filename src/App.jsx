@@ -4,10 +4,12 @@ import Footer from "./component/layouts/Footer";
 import Signup from "./component/Signup";
 import Login from "./component/Login";
 import Home from "./component/Home";
+import ScrollToTop from "./component/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Navbar />
       <Routes>
         <Route

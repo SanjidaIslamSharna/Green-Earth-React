@@ -36,6 +36,10 @@ const Products = () => {
     setFiltered(filteredItems);
   };
 
+    const addToCart = (product) => {
+    console.log("Product added to cart:", product);
+  }
+
   return (
     <section className="w-screen py-5 md:py-20 bg-[#F0FDF4]">
       <div className="px-4 py-2 md:px-[135px] md:py-[24px] mx-auto flex flex-col gap-10">
@@ -47,7 +51,7 @@ const Products = () => {
           <div className="md:w-4/5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.length > 0 ? (
               filtered.map((product) => (
-                <ProductCards key={product.id} product={product} />
+                <ProductCards key={product.id} product={product} addToCart={addToCart} />
               ))
             ) : (
               <p>No products found.</p>
