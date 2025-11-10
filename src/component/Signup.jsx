@@ -4,7 +4,7 @@ import {
   createUserWithEmailAndPassword,
   sendEmailVerification,
 } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -65,9 +65,9 @@ const Signup = () => {
         </button>
         <p className="text-center">
           Already have an account?{" "}
-          <a href="/login" className="text-green-600">
+          <Link to="/login" className="text-green-600">
             Login
-          </a>
+          </Link>
         </p>
       </form>
       {message && <p className="mt-4 text-center">{message}</p>}
