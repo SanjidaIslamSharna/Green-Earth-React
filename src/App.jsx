@@ -5,6 +5,7 @@ import Signup from "./component/Signup";
 import Login from "./component/Login";
 import Home from "./component/Home";
 import ScrollToTop from "./component/ScrollToTop";
+import Invoice from "./component/Invoice";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             </>
           }
         />
+        <Route path="/invoice" element={<Invoice />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>
