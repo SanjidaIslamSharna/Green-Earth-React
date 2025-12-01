@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Categories from "./layouts/Categories";
+import Categories from "./layout/Categories";
 import ProductCards from "./cards/ProductCards";
 import { useNavigate } from "react-router-dom";
 
@@ -85,12 +85,12 @@ const Products = () => {
 
   // 🔹 Checkout
   const checkout = () => {
-    localStorage.setItem("checkoutCart", JSON.stringify(cart));
-    localStorage.setItem("checkoutTotal", total.toFixed(2));
+    // localStorage.setItem("checkoutCart", JSON.stringify(cart));
+    // localStorage.setItem("checkoutTotal", total.toFixed(2));
 
-    setCart([]);
-    localStorage.removeItem("cart");
-    navigate("/invoice");
+    // setCart([]);
+    // localStorage.removeItem("cart");
+    navigate("/checkout");
   };
 
   return (
